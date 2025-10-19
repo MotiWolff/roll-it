@@ -7,7 +7,7 @@ import Message from './components/Message'
 import { useGameLogic } from './hooks/useGameLogic'
 
 function App() {
-  // Setting game necessary states from the useGameLogic file
+  // Get game state and handlers from custom hook
   const {
     scores,
     round,
@@ -25,16 +25,17 @@ function App() {
 
   return (
     <div className="game">
-      <h1>Roll It</h1>
+      <h1>Roll It – Yalla Balagan!</h1>
 
-      
-      <GameControls 
+      {/* Game settings and new game button */}
+      <GameControls
         target={target}
         onChangeTarget={onChangeTarget}
         onNewGame={onNewGame}
         isGameOver={gameOver}
       />
 
+      {/* Player cards */}
       <div className="board">
         {[0, 1].map((p) => (
           <Player
@@ -49,8 +50,10 @@ function App() {
         ))}
       </div>
 
+      {/* Dice display */}
       <Dice dice={dice} />
 
+      {/* Roll and Hold buttons */}
       <Actions
         onRoll={onRoll}
         onHold={onHold}
@@ -58,6 +61,7 @@ function App() {
         canHold={!gameOver && round > 0}
       />
 
+      {/* Game messages */}
       <Message message={message} />
     </div>
   )
