@@ -1,4 +1,4 @@
-# Roll It – Yalla Balagan! 🎲
+# Roll It
 
 A two-player dice game built with React and Vite. Roll the dice, accumulate points, but watch out for double sixes!
 
@@ -92,4 +92,4 @@ npm run preview
 
 ---
 
-**Yalla Balagan!** Let the games begin! 🎉
+**Yalla Balagan!** Let the games begin!
