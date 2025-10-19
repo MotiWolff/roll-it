@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="game">
-      <h1>Roll It – Yalla Balagan!</h1>
+      <h1>Roll It</h1>
 
       {/* Game settings and new game button */}
       <GameControls
