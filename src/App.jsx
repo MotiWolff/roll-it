@@ -4,6 +4,8 @@ import Dice from './components/Dice'
 import GameControls from './components/GameControls'
 import Actions from './components/Actions'
 import Message from './components/Message'
+import DoubleSixOverlay from './components/DoubleSixOverlay'
+import AudioManager from './components/AudioManager'
 import { useGameLogic } from './hooks/useGameLogic'
 
 function App() {
@@ -17,10 +19,16 @@ function App() {
     gameOver,
     message,
     wins,
+    aiEnabled,
+    soundEnabled,
+    showDoubleSix,
     onRoll,
     onHold,
     onNewGame,
     onChangeTarget,
+    toggleAI,
+    toggleSound,
+    closeDoubleSix,
   } = useGameLogic()
 
   return (
@@ -33,6 +41,10 @@ function App() {
         onChangeTarget={onChangeTarget}
         onNewGame={onNewGame}
         isGameOver={gameOver}
+        aiEnabled={aiEnabled}
+        toggleAI={toggleAI}
+        soundEnabled={soundEnabled}
+        toggleSound={toggleSound}
       />
 
       {/* Player cards */}
@@ -63,6 +75,16 @@ function App() {
 
       {/* Game messages */}
       <Message message={message} />
+
+      {/* Double-six overlay */}
+      <DoubleSixOverlay
+        show={showDoubleSix}
+        playerNumber={active + 1}
+        onClose={closeDoubleSix}
+      />
+
+      {/* Audio Manager */}
+      <AudioManager enabled={soundEnabled} />
     </div>
   )
 }

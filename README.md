@@ -23,6 +23,9 @@ A two-player dice game built with React and Vite. Roll the dice, accumulate poin
 - ✅ Responsive design for mobile and desktop
 - ✅ Game state messages and feedback
 - ✅ New game functionality that preserves win statistics
+- 🤖 **AI Opponent powered by OpenAI GPT-4o-mini** - Real machine learning decisions!
+- 🔄 **Automatic fallback** to rule-based AI if API fails
+- 💾 **localStorage persistence** for settings and win counts
 
 ## Project Structure
 
@@ -46,10 +49,24 @@ src/
 
 ## Getting Started
 
+## Installation
+
 ### Install Dependencies
 ```bash
 npm install
 ```
+
+### Setup OpenAI API (Required for AI Opponent)
+1. Get an API key from [OpenAI Platform](https://platform.openai.com/api-keys)
+2. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+3. Add your API key to `.env`:
+   ```
+   VITE_OPENAI_API_KEY=sk-proj-your-actual-key-here
+   ```
+4. **Never commit your `.env` file!** (it's in `.gitignore`)
 
 ### Run Development Server
 ```bash
