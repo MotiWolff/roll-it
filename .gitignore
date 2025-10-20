@@ -11,6 +11,9 @@ node_modules
 dist-ssr
 *.local
 
+# Keep root index.html out of git (dev only)
+/index.html
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
