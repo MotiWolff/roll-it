@@ -2,6 +2,9 @@
 
 A two-player dice game built with React and Vite. Roll the dice, accumulate points, but watch out for double sixes!
 
+## Important Note!
+- There are two branches. main which includes the code of the basic project, and extra which also have the extra features like saving scores, using local storage, adding ai player, music etc. 
+
 ## Game Rules
 
 ### Basic Gameplay
